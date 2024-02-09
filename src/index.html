@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Portfolio</title>
+  <!-- Costumize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="src/output.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="font-poppins dark:bg-darkModeBody bg-bodyColor">
+
+  <!-- Start Navbar -->
+  <nav
+    class="bg-bodyColor dark:bg-darkModeBody fixed w-full z-20 top-0 start-0 border-b border-white dark:border-[#262A2E]">
+    <div class="max-w-[1200px] flex flex-wrap items-center justify-between mx-auto px-4 pt-10 pb-5">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse md:hidden">
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-lightText text-darkModeBody text-montserrat">Faiqmubarok.</span>
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button id="theme-toggle" type="button"
+          class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-darkModeBody rounded-lg md:hidden hover:bg-[#C1C1C1] focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-bodyColor md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-bodyColor dark:bg-darkModeBody dark:border-gray-700">
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white bg-accentColor rounded md:bg-transparent md:text-accentColor md:p-0 md:dark:text-accentColor font-bold"
+              aria-current="page">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="li-navbar">About</a>
+          </li>
+          <li>
+            <a href="#" class="li-navbar">Portfolio</a>
+          </li>
+          <li>
+            <a href="#" class="li-navbar">Resume</a>
+          </li>
+          <li>
+            <a href="#" class="li-navbar">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Welcome -->
+  <main class="max-w-[1200px] mx-auto">
+    <section id="home" class="md:mt-80 mt-64 px-4 flex flex-col md:flex-row justify-between gap-10 lg:gap-20">
+      <!-- Photo Profile -->
+      <section id="a" class="w-full md:order-2 self-end md:w-1/2 flex-1">
+        <div class="flex md:justify-end">
+          <div
+            class="w-full max-w-[432px] h-[496px] mx-auto md:mx-0 rounded-2xl shadow-shadowFirst relative radial-gradient-dark">
+            <img src="Asset/photoProfilePeople.png" alt=""
+              class="max-w-full absolute bottom-0 left-20 md:-translate-x-2 -translate-x-8">
+          </div>
+        </div>
+      </section>
+      <!-- Welcome -->
+      <section id="b" class="w-full md:order-1 md:w-1/2  md:-mt-16">
+        <div class="mb-24 flex flex-col gap-6">
+          <h1 class="text-lightText font-bold text-[58px] font-montserrat">Hi, I'm <span
+              class="text-accentColor font-montserrat">Faiq</span></h1>
+          <h2 class="text-lightText font-bold text-3xl font-montserrat">a <span id="typewriter"></span> </h2>
+          <p class="text-base text-lightText leading-7">I enjoy creating attractive designs and making code work.
+            Welcome to my portfolio website, here you can see the creative projects I have worked on. Let's explore in
+            more depth.</p>
+        </div>
+        <div class="">
+          <h2 class="text-lightText font-normal text-lg mb-10">FIND ME IN :</h2>
+          <div class="flex gap-6">
+            <a href="https://wa.me/082117748606" class="wrap-icon group">
+              <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"
+                class="text-lightText fill-current group-hover:text-accentColor">
+                <path
+                  d="M18.0015 3C26.286 3 33.0015 9.7155 33.0015 18C33.0015 26.2845 26.286 33 18.0015 33C15.3507 33.0043 12.7465 32.3028 10.4565 30.9675L3.00749 33L5.03549 25.548C3.69913 23.2573 2.99706 20.652 3.00149 18C3.00149 9.7155 9.71699 3 18.0015 3ZM12.8895 10.95L12.5895 10.962C12.3953 10.9738 12.2055 11.0249 12.0315 11.112C11.8688 11.2041 11.7202 11.3193 11.5905 11.454C11.4105 11.6235 11.3085 11.7705 11.199 11.913C10.6442 12.6344 10.3454 13.52 10.35 14.43C10.353 15.165 10.545 15.8805 10.845 16.5495C11.4585 17.9025 12.468 19.335 13.8 20.6625C14.121 20.982 14.436 21.303 14.775 21.6015C16.4301 23.0587 18.4024 24.1096 20.535 24.6705L21.387 24.801C21.6645 24.816 21.942 24.795 22.221 24.7815C22.6578 24.7589 23.0844 24.6407 23.4705 24.435C23.6669 24.3338 23.8586 24.2237 24.045 24.105C24.045 24.105 24.1095 24.063 24.2325 23.97C24.435 23.82 24.5595 23.7135 24.7275 23.538C24.852 23.409 24.96 23.2575 25.0425 23.085C25.1595 22.8405 25.2765 22.374 25.3245 21.9855C25.3605 21.6885 25.35 21.5265 25.3455 21.426C25.3395 21.2655 25.206 21.099 25.0605 21.0285L24.1875 20.637C24.1875 20.637 22.8825 20.0685 22.0845 19.7055C22.001 19.669 21.9115 19.6482 21.8205 19.644C21.7179 19.6335 21.6142 19.645 21.5164 19.6779C21.4186 19.7107 21.3289 19.7641 21.2535 19.8345C21.246 19.8315 21.1455 19.917 20.061 21.231C19.9987 21.3146 19.913 21.3779 19.8147 21.4126C19.7164 21.4473 19.61 21.452 19.509 21.426C19.4113 21.3998 19.3155 21.3667 19.2225 21.327C19.0365 21.249 18.972 21.219 18.8445 21.165C17.9836 20.7893 17.1865 20.2817 16.482 19.6605C16.293 19.4955 16.1175 19.3155 15.9375 19.1415C15.3474 18.5763 14.8331 17.937 14.4075 17.2395L14.319 17.097C14.2554 17.0012 14.204 16.898 14.166 16.7895C14.109 16.569 14.2575 16.392 14.2575 16.392C14.2575 16.392 14.622 15.993 14.7915 15.777C14.9565 15.567 15.096 15.363 15.186 15.2175C15.363 14.9325 15.4185 14.64 15.3255 14.4135C14.9055 13.3875 14.4705 12.366 14.0235 11.352C13.935 11.151 13.6725 11.007 13.434 10.9785C13.353 10.9695 13.272 10.9605 13.191 10.9545C12.9895 10.9445 12.7877 10.9465 12.5865 10.9605L12.8895 10.95Z">
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/faiqmubarok._/" target="_blank" class="wrap-icon group">
+              <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"
+                class="text-lightText fill-current group-hover:text-accentColor">
+                <path
+                  d="M19.542 3C21.2295 3.0045 22.086 3.0135 22.8255 3.0345L23.1165 3.045C23.4525 3.057 23.784 3.072 24.1845 3.09C25.7805 3.165 26.8695 3.417 27.825 3.7875C28.815 4.1685 29.649 4.6845 30.483 5.517C31.2458 6.26684 31.8359 7.17388 32.2125 8.175C32.583 9.1305 32.835 10.2195 32.91 11.817C32.928 12.216 32.943 12.5475 32.955 12.885L32.964 13.176C32.9865 13.914 32.9955 14.7705 32.9985 16.458L33 17.577V19.542C33.0037 20.6361 32.9922 21.7302 32.9655 22.824L32.9565 23.115C32.9445 23.4525 32.9295 23.784 32.9115 24.183C32.8365 25.7805 32.5815 26.868 32.2125 27.825C31.837 28.8267 31.2467 29.7339 30.483 30.483C29.733 31.2455 28.826 31.8356 27.825 32.2125C26.8695 32.583 25.7805 32.835 24.1845 32.91C23.8286 32.9268 23.4726 32.9418 23.1165 32.955L22.8255 32.964C22.086 32.985 21.2295 32.9955 19.542 32.9985L18.423 33H16.4595C15.3649 33.0038 14.2703 32.9923 13.176 32.9655L12.885 32.9565C12.5289 32.943 12.1729 32.9275 11.817 32.91C10.221 32.835 9.13201 32.583 8.17501 32.2125C7.17401 31.8366 6.26734 31.2463 5.51851 30.483C4.75508 29.7334 4.16435 28.8263 3.78751 27.825C3.41701 26.8695 3.16501 25.7805 3.09001 24.183C3.0733 23.8271 3.0583 23.4711 3.04501 23.115L3.03751 22.824C3.00987 21.7302 2.99737 20.6361 3.00001 19.542V16.458C2.99582 15.3639 3.00683 14.2698 3.03301 13.176L3.04351 12.885C3.05551 12.5475 3.07051 12.216 3.08851 11.817C3.16351 10.2195 3.41551 9.132 3.78601 8.175C4.16268 7.17286 4.75459 6.26554 5.52001 5.517C6.26865 4.75421 7.17473 4.16398 8.17501 3.7875C9.13201 3.417 10.2195 3.165 11.817 3.09C12.216 3.072 12.549 3.057 12.885 3.045L13.176 3.036C14.2698 3.00935 15.3639 2.99785 16.458 3.0015L19.542 3ZM18 10.5C16.0109 10.5 14.1032 11.2902 12.6967 12.6967C11.2902 14.1032 10.5 16.0109 10.5 18C10.5 19.9891 11.2902 21.8968 12.6967 23.3033C14.1032 24.7098 16.0109 25.5 18 25.5C19.9891 25.5 21.8968 24.7098 23.3033 23.3033C24.7098 21.8968 25.5 19.9891 25.5 18C25.5 16.0109 24.7098 14.1032 23.3033 12.6967C21.8968 11.2902 19.9891 10.5 18 10.5ZM18 13.5C18.591 13.4999 19.1761 13.6162 19.7221 13.8423C20.2681 14.0683 20.7643 14.3997 21.1822 14.8175C21.6001 15.2353 21.9317 15.7313 22.1579 16.2772C22.3842 16.8232 22.5007 17.4083 22.5008 17.9993C22.5009 18.5902 22.3846 19.1754 22.1585 19.7214C21.9325 20.2674 21.6011 20.7635 21.1833 21.1814C20.7655 21.5994 20.2695 21.9309 19.7235 22.1572C19.1776 22.3834 18.5925 22.4999 18.0015 22.5C16.808 22.5 15.6634 22.0259 14.8195 21.182C13.9756 20.3381 13.5015 19.1935 13.5015 18C13.5015 16.8065 13.9756 15.6619 14.8195 14.818C15.6634 13.9741 16.808 13.5 18.0015 13.5M25.8765 8.25C25.3792 8.25 24.9023 8.44754 24.5507 8.79917C24.1991 9.15081 24.0015 9.62772 24.0015 10.125C24.0015 10.6223 24.1991 11.0992 24.5507 11.4508C24.9023 11.8025 25.3792 12 25.8765 12C26.3738 12 26.8507 11.8025 27.2023 11.4508C27.554 11.0992 27.7515 10.6223 27.7515 10.125C27.7515 9.62772 27.554 9.15081 27.2023 8.79917C26.8507 8.44754 26.3738 8.25 25.8765 8.25Z" />
+              </svg>
+            </a>
+            <a href="#" class="wrap-icon group">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="text-lightText fill-current group-hover:text-accentColor">
+                <path
+                  d="M7.125 2.8125C6.27962 2.8125 5.46887 3.14832 4.8711 3.7461C4.27332 4.34387 3.9375 5.15462 3.9375 6C3.9375 6.84538 4.27332 7.65613 4.8711 8.2539C5.46887 8.85168 6.27962 9.1875 7.125 9.1875C7.97038 9.1875 8.78113 8.85168 9.3789 8.2539C9.97668 7.65613 10.3125 6.84538 10.3125 6C10.3125 5.15462 9.97668 4.34387 9.3789 3.7461C8.78113 3.14832 7.97038 2.8125 7.125 2.8125ZM4.125 11.8125C4.07527 11.8125 4.02758 11.8323 3.99242 11.8674C3.95725 11.9026 3.9375 11.9503 3.9375 12V31.5C3.9375 31.6035 4.0215 31.6875 4.125 31.6875H10.125C10.1747 31.6875 10.2224 31.6677 10.2576 31.6326C10.2927 31.5974 10.3125 31.5497 10.3125 31.5V12C10.3125 11.9503 10.2927 11.9026 10.2576 11.8674C10.2224 11.8323 10.1747 11.8125 10.125 11.8125H4.125ZM13.875 11.8125C13.8253 11.8125 13.7776 11.8323 13.7424 11.8674C13.7073 11.9026 13.6875 11.9503 13.6875 12V31.5C13.6875 31.6035 13.7715 31.6875 13.875 31.6875H19.875C19.9247 31.6875 19.9724 31.6677 20.0076 31.6326C20.0427 31.5974 20.0625 31.5497 20.0625 31.5V21C20.0625 20.2541 20.3588 19.5387 20.8863 19.0113C21.4137 18.4838 22.1291 18.1875 22.875 18.1875C23.6209 18.1875 24.3363 18.4838 24.8637 19.0113C25.3912 19.5387 25.6875 20.2541 25.6875 21V31.5C25.6875 31.6035 25.7715 31.6875 25.875 31.6875H31.875C31.9247 31.6875 31.9724 31.6677 32.0076 31.6326C32.0427 31.5974 32.0625 31.5497 32.0625 31.5V18.57C32.0625 14.9295 28.8975 12.0825 25.275 12.411C24.1542 12.513 23.0563 12.7904 22.0215 13.233L20.0625 14.073V12C20.0625 11.9503 20.0427 11.9026 20.0076 11.8674C19.9724 11.8323 19.9247 11.8125 19.875 11.8125H13.875Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <!-- End Welcome Home -->
+
+  <hr class="border-t-1 border-black max-w-[1200px] mx-auto my-24 px-4">
+
+  <!-- Start About -->
+  <div class="max-w-[1200px] mx-auto px-4">
+    <div class="bg-darkModeBody px-10 md:px-20 py-16 shadow-shadowFirst rounded-lg">
+      <h2 class="font-montserrat font-bold text-accentColor text-3xl text-center mb-12">About Me</h2>
+      <p class="leading-7 text-justify text-lightText mb-7">Hello, let me introduce myself. I'm Muhammad Faiq Mubarok,
+        or you
+        can call me
+        Faiq. Currently, I'm a
+        20 years old student pursuing a career in Information Systems at Telkom University Institute in Purwokerto.</p>
+      <p class="leading-7 text-justify text-lightText mb-7">I started my journey in the design field back in 2019, where
+        I actively engaged in creating designs for various
+        organizations and events. These designs ranged from banners to logos and other visual elements, and I initially
+        used tools such as Corel Draw. As time progressed, I continued to refine my design skills, transitioning to
+        tools like Canva and Figma. I've also gained experience working as a freelance designer, specializing in
+        creating stickers.</p>
+      <p class="leading-7 text-justify text-lightText mb-7">Since 2022, my interest has expanded to the field of
+        Information Technology (IT). With the vision of becoming
+        an IT Manager, I am pursuing a degree in Information Systems. In addition to my academic studies, I actively
+        enhance my knowledge through online platforms such as YouTube and various bootcamps. Currently, I have
+        maintained a satisfactory Cumulative Grade Point Average (GPA) of 3.93.</p>
+    </div>
+    <div class="my-20 flex items-center space-x-5">
+      <hr class="w-20 border-2 rounded border-accentColor">
+      <h2 class="text-2xl font-bold text-lightText">Skills</h2>
+    </div>
+    <ul class="flex flex-wrap text-lg font-semibold text-center text-gray-500 dark:text-gray-400 -mt-10">
+      <li class="me-2">
+        <a href="#" class="inline-block px-4 py-3 text-darkModeBody bg-lightText rounded-lg active"
+          aria-current="page">Tech
+          Stack</a>
+      </li>
+      <li class="me-2">
+        <a href="#" class="tabs-about">Tools</a>
+      </li>
+      <li class="me-2">
+        <a href="#" class="tabs-about">Design</a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- End About -->
+  <div class="h-96"></div>
+  <!-- Costumize JS -->
+  <!-- Script Darkmode -->
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+        '(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+</body>
+
+</html>
