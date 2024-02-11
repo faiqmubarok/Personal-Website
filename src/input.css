@@ -2,22 +2,29 @@
 @tailwind utilities;
 @tailwind components;
 
-
 @layer components {
-    .wrap-icon {
-        @apply w-16 h-16 bg-[#191B1E] rounded-lg flex justify-center items-center hover:translate-y-[-0.25rem] duration-300 transition-all shadow-shadowFirst;
-    }
-    .li-navbar {
-        @apply block py-2 px-3 hover:bg-[#C1C1C1] md:hover:bg-transparent md:hover:text-accentColor md:p-0 md:dark:hover:text-accentColor dark:text-lightText dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold;
-    }
-    .tabs-about {
-        @apply inline-block px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white;
-    }
+  .wrap-icon {
+    @apply w-16 h-16 bg-[#D6D5D5] dark:bg-[#191B1E] rounded-lg flex justify-center items-center hover:translate-y-[-0.25rem] duration-300 transition-all shadow-shadowSecond dark:shadow-shadowFirst;
+  }
+  .li-navbar {
+    @apply block py-2 px-3 text-darkModeBody rounded hover:bg-[#D6D5D5] md:hover:bg-transparent md:hover:text-accentColor md:p-0 md:dark:hover:text-accentColor dark:text-lightText dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold;
+  }
+  .tabs-about {
+    @apply inline-block px-4 py-3 rounded-lg hover:text-gray-900 hover:bg-[#D6D5D5] dark:hover:bg-gray-700 dark:hover:text-white;
+  }
+  .paragraf-1 {
+    @apply leading-7 text-darkModeBody dark:text-lightText;
+  }
+  .li-skill {
+    @apply px-6 dark:bg-[#191B1E] py-5 rounded-xl border border-[7E8187];
+  }
 }
 
 @layer utilities {
-    .radial-gradient-dark {
-        background-image: radial-gradient(circle, #23272B, #1E2024);
-    }
+  .radial-gradient-dark {
+    background-image: radial-gradient(circle, #23272b, #1e2024);
+  }
+  .radial-gradient-light {
+    background-image: radial-gradient(circle, #dfdfdf, #d6d5d5);
+  }
 }
-

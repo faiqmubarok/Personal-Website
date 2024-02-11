@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./{index.html, script.js}",],
+  content: ["./src/**/*.{html,js}"],
   darkMode: 'class',
   theme: {
     extend: {
@@ -16,6 +16,7 @@ module.exports = {
       },
       boxShadow: {
         shadowFirst : "10px 10px 19px #1C1E22, -10px -10px 19px #262A2E",
+        shadowSecond : "10px 10px 19px rgba(0, 0, 0, 0.25), -10px -10px 19px rgba(0, 0, 0, 0.10)",
       },
     },
   },
